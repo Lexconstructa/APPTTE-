@@ -1,170 +1,446 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LEXCONSTRUCTA - Cátedra Universitaria TTE 2026</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-<style>
-*{font-family:'Inter',sans-serif} .serif{font-family:'Playfair Display',serif}
-body{background:#0f0a1e} .sidebar{background:#1a1033} .card{background:#221844;border:1px solid #3b2a6b}
-.nav-btn.active{background:#7c3aed;color:white} .hidden-section{display:none}
-input,select,textarea{background:#1a1033!important;border:1px solid #3b2a6b!important;color:white!important}
-</style>
-</head>
-<body class="text-white min-h-screen">
-<div class="flex flex-col md:flex-row min-h-screen">
-<!-- SIDEBAR -->
-<aside class="sidebar w-full md:w-72 shrink-0 p-5 md:min-h-screen md:sticky md:top-0">
-<div class="flex items-center gap-3">
-<div class="w-12 h-12 bg-violet-600 rounded-xl flex items-center justify-center text-2xl font-black">L</div>
-<div><h1 class="serif text-xl font-black leading-none">LEXCONSTRUCTA</h1><p class="text-[11px] text-violet-300 mt-1">CÁTEDRA UNIVERSITARIA • TTE 2026</p></div>
-</div>
-<p class="text-[11px] tracking-widest text-violet-300 mt-6 mb-2">NAVEGACIÓN</p>
-<nav class="space-y-1 text-sm" id="menu">
-<button onclick="show('inicio')" class="nav-btn active w-full text-left px-3 py-2.5 rounded-lg">1. Inicio & Desafío</button>
-<button onclick="show('docente')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">2. Panel Docente</button>
-<button onclick="show('estudiante')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">3. Panel Estudiante</button>
-<button onclick="show('simulador')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">4. Simulador de Juicio</button>
-<button onclick="show('casos')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">5. Casos y Jurisprudencia</button>
-<button onclick="show('eval')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">6. Evaluaciones</button>
-<button onclick="show('ranking')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">7. Ranking</button>
-<button onclick="show('material')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">8. Material y Biblioteca</button>
-<button onclick="show('chat')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">9. Chat de Dudas</button>
-<button onclick="show('admin')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">10. Administración</button>
-</nav>
-<div class="card rounded-xl p-4 mt-6"><p class="text-xs text-violet-200">Alumna destacada de la semana</p><p class="font-bold mt-1">Dra. Gabriela Castellano</p><p class="text-xs text-zinc-400">Titular de Cátedra • TTE 2026</p></div>
-</aside>
+<!-- saved from url=(0057)file:///C:/Users/Gaby/Desktop/APP%20TTE%202026/index.html -->
+<html lang="es" class="h-full bg-slate-950 text-slate-100"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LexConstructa | Simulación Profesional en Arquitectura y Derecho</title>
+  
+  <!-- Tipografía moderna Inter y JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./LexConstructa _ Simulación Profesional en Arquitectura y Derecho_files/css2" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="./LexConstructa _ Simulación Profesional en Arquitectura y Derecho_files/saved_resource"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0f172a',
+              blue: '#1d4ed8',
+              accent: '#f97316',
+              darkblue: '#1e3a8a',
+              orangeDark: '#c2410c'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            serif: ['Merriweather', 'serif']
+          }
+        }
+      }
+    }
+  </script>
 
-<!-- MAIN -->
-<main class="flex-1 p-5 md:p-8 max-w-5xl mx-auto w-full">
+  <!-- Estilos complementarios -->
+  <link rel="stylesheet" href="./LexConstructa _ Simulación Profesional en Arquitectura y Derecho_files/custom.css">
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.inset-y-0{top:0px;bottom:0px}.top-0{top:0px}.-right-1{right:-0.25rem}.-top-1{top:-0.25rem}.left-0{left:0px}.-bottom-10{bottom:-2.5rem}.-left-10{left:-2.5rem}.-right-10{right:-2.5rem}.-top-10{top:-2.5rem}.right-2{right:0.5rem}.top-2{top:0.5rem}.z-40{z-index:40}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mt-6{margin-top:1.5rem}.mt-1{margin-top:0.25rem}.mb-1{margin-bottom:0.25rem}.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-full{height:100%}.h-1\.5{height:0.375rem}.h-10{height:2.5rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-2{height:0.5rem}.h-80{height:20rem}.h-96{height:24rem}.h-40{height:10rem}.w-0{width:0px}.w-10{width:2.5rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-72{width:18rem}.w-full{width:100%}.w-2{width:0.5rem}.w-80{width:20rem}.w-96{width:24rem}.w-\[85\%\]{width:85%}.max-w-2xl{max-width:42rem}.max-w-7xl{max-width:80rem}.max-w-4xl{max-width:56rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.-translate-x-full{--tw-translate-x:-100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-6{gap:1.5rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.whitespace-nowrap{white-space:nowrap}.rounded-lg{border-radius:0.5rem}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.rounded-2xl{border-radius:1rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-l-4{border-left-width:4px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-blue-500\/40{border-color:rgb(59 130 246 / 0.4)}.border-blue-700\/40{border-color:rgb(29 78 216 / 0.4)}.border-blue-700\/50{border-color:rgb(29 78 216 / 0.5)}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-orange-500\/40{border-color:rgb(249 115 22 / 0.4)}.border-red-500\/40{border-color:rgb(239 68 68 / 0.4)}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/60{border-color:rgb(51 65 85 / 0.6)}.border-blue-500\/30{border-color:rgb(59 130 246 / 0.3)}.border-blue-800\/40{border-color:rgb(30 64 175 / 0.4)}.border-orange-500\/30{border-color:rgb(249 115 22 / 0.3)}.border-slate-800\/80{border-color:rgb(30 41 59 / 0.8)}.border-amber-500{--tw-border-opacity:1;border-color:rgb(245 158 11 / var(--tw-border-opacity, 1))}.border-amber-500\/30{border-color:rgb(245 158 11 / 0.3)}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-sky-500{--tw-border-opacity:1;border-color:rgb(14 165 233 / var(--tw-border-opacity, 1))}.border-sky-500\/30{border-color:rgb(14 165 233 / 0.3)}.border-slate-800\/60{border-color:rgb(30 41 59 / 0.6)}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.bg-slate-900\/90{background-color:rgb(15 23 42 / 0.9)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-blue-900\/40{background-color:rgb(30 58 138 / 0.4)}.bg-blue-900\/60{background-color:rgb(30 58 138 / 0.6)}.bg-blue-950{--tw-bg-opacity:1;background-color:rgb(23 37 84 / var(--tw-bg-opacity, 1))}.bg-orange-400{--tw-bg-opacity:1;background-color:rgb(251 146 60 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-orange-600\/30{background-color:rgb(234 88 12 / 0.3)}.bg-orange-950{--tw-bg-opacity:1;background-color:rgb(67 20 7 / var(--tw-bg-opacity, 1))}.bg-orange-950\/40{background-color:rgb(67 20 7 / 0.4)}.bg-red-950{--tw-bg-opacity:1;background-color:rgb(69 10 10 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/95{background-color:rgb(15 23 42 / 0.95)}.bg-slate-950\/40{background-color:rgb(2 6 23 / 0.4)}.bg-slate-950\/60{background-color:rgb(2 6 23 / 0.6)}.bg-slate-950\/70{background-color:rgb(2 6 23 / 0.7)}.bg-slate-950\/80{background-color:rgb(2 6 23 / 0.8)}.bg-blue-500\/10{background-color:rgb(59 130 246 / 0.1)}.bg-blue-600\/10{background-color:rgb(37 99 235 / 0.1)}.bg-blue-900\/50{background-color:rgb(30 58 138 / 0.5)}.bg-orange-500\/10{background-color:rgb(249 115 22 / 0.1)}.bg-orange-600{--tw-bg-opacity:1;background-color:rgb(234 88 12 / var(--tw-bg-opacity, 1))}.bg-orange-900\/50{background-color:rgb(124 45 18 / 0.5)}.bg-orange-950\/60{background-color:rgb(67 20 7 / 0.6)}.bg-amber-500\/10{background-color:rgb(245 158 11 / 0.1)}.bg-amber-950\/40{background-color:rgb(69 26 3 / 0.4)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-orange-950\/80{background-color:rgb(67 20 7 / 0.8)}.bg-red-700{--tw-bg-opacity:1;background-color:rgb(185 28 28 / var(--tw-bg-opacity, 1))}.bg-red-950\/40{background-color:rgb(69 10 10 / 0.4)}.bg-sky-500\/10{background-color:rgb(14 165 233 / 0.1)}.bg-amber-950{--tw-bg-opacity:1;background-color:rgb(69 26 3 / var(--tw-bg-opacity, 1))}.bg-red-950\/80{background-color:rgb(69 10 10 / 0.8)}.bg-sky-950{--tw-bg-opacity:1;background-color:rgb(8 47 73 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-700{--tw-gradient-from:#1d4ed8 var(--tw-gradient-from-position);--tw-gradient-to:rgb(29 78 216 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-blue-950{--tw-gradient-from:#172554 var(--tw-gradient-from-position);--tw-gradient-to:rgb(23 37 84 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-orange-400{--tw-gradient-from:#fb923c var(--tw-gradient-from-position);--tw-gradient-to:rgb(251 146 60 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-900{--tw-gradient-from:#0f172a var(--tw-gradient-from-position);--tw-gradient-to:rgb(15 23 42 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-blue-900{--tw-gradient-to:rgb(30 58 138 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #1e3a8a var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-orange-500{--tw-gradient-to:rgb(249 115 22 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #f97316 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-slate-900{--tw-gradient-to:rgb(15 23 42 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #0f172a var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-amber-400{--tw-gradient-to:#fbbf24 var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.to-amber-300{--tw-gradient-to:#fcd34d var(--tw-gradient-to-position)}.to-slate-950{--tw-gradient-to:#020617 var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.p-2{padding:0.5rem}.p-1{padding:0.25rem}.p-1\.5{padding:0.375rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-5{padding:1.25rem}.p-3\.5{padding:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.pb-2{padding-bottom:0.5rem}.pb-3{padding-bottom:0.75rem}.pl-2{padding-left:0.5rem}.pt-1{padding-top:0.25rem}.pt-2{padding-top:0.5rem}.pt-4{padding-top:1rem}.pb-4{padding-bottom:1rem}.text-left{text-align:left}.text-right{text-align:right}.font-sans{font-family:Inter, sans-serif}.font-mono{font-family:JetBrains Mono, monospace}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[9px\]{font-size:9px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-orange-300{--tw-text-opacity:1;color:rgb(253 186 116 / var(--tw-text-opacity, 1))}.text-orange-400{--tw-text-opacity:1;color:rgb(251 146 60 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-red-300{--tw-text-opacity:1;color:rgb(252 165 165 / var(--tw-text-opacity, 1))}.text-sky-400{--tw-text-opacity:1;color:rgb(56 189 248 / var(--tw-text-opacity, 1))}.text-sky-300{--tw-text-opacity:1;color:rgb(125 211 252 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.opacity-75{opacity:0.75}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.selection\:bg-orange-500 *::selection{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-orange-500::selection{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:border-blue-500\/50:hover{border-color:rgb(59 130 246 / 0.5)}.hover\:border-blue-500:hover{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.hover\:border-blue-500\/60:hover{border-color:rgb(59 130 246 / 0.6)}.hover\:border-slate-700:hover{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:bg-orange-900\/50:hover{background-color:rgb(124 45 18 / 0.5)}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-800\/50:hover{background-color:rgb(30 64 175 / 0.5)}.hover\:bg-orange-500:hover{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.hover\:bg-orange-900:hover{--tw-bg-opacity:1;background-color:rgb(124 45 18 / var(--tw-bg-opacity, 1))}.hover\:bg-red-600:hover{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-500:hover{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-orange-400:hover{--tw-text-opacity:1;color:rgb(251 146 60 / var(--tw-text-opacity, 1))}.hover\:text-blue-300:hover{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 640px){.sm\:block{display:block}.sm\:inline-block{display:inline-block}.sm\:flex{display:flex}.sm\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:gap-4{gap:1rem}.sm\:p-6{padding:1.5rem}.sm\:p-10{padding:2.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:px-4{padding-left:1rem;padding-right:1rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:block{display:block}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:static{position:static}.lg\:hidden{display:none}.lg\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.lg\:p-8{padding:2rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="h-full flex flex-col font-sans bg-slate-950 text-slate-100 selection:bg-orange-500 selection:text-white">
 
-<!-- 1 INICIO -->
-<section id="sec-inicio">
-<div class="bg-gradient-to-r from-violet-700 to-fuchsia-600 rounded-2xl p-6 md:p-8">
-<h2 class="serif text-3xl md:text-4xl font-black">Bienvenidos a LEXCONSTRUCTA</h2>
-<p class="mt-2 text-violet-100">Derecho • Construcción • Argumentación. Aprender el derecho construyendo casos reales.</p>
-<div class="flex gap-2 mt-5 flex-wrap"><button onclick="show('simulador')" class="bg-white text-violet-800 font-bold px-4 py-2 rounded-lg">Ir al Simulador →</button><button onclick="show('eval')" class="bg-black/30 px-4 py-2 rounded-lg font-bold">Hacer Evaluación</button></div>
-</div>
-<div class="grid md:grid-cols-3 gap-4 mt-5">
-<div class="card rounded-xl p-5"><h3 class="font-bold">🎯 Desafío de la semana</h3><p class="text-sm text-zinc-300 mt-2">Caso: Obra paralizada por falta de pago. ¿Rescisión o suspensión? Armá tu argumento en el Simulador y defendelo.</p><button onclick="show('simulador')" class="mt-3 bg-violet-600 px-3 py-2 rounded-lg text-sm font-bold">Aceptar desafío</button></div>
-<div class="card rounded-xl p-5"><h3 class="font-bold">📚 Próxima clase</h3><p class="text-sm text-zinc-300 mt-2">Responsabilidad del constructor. Contratos de obra. Art. 1262 y ss. Código Civil y Comercial.</p><p class="text-xs text-violet-300 mt-2">Lunes 10 hs • Aula 4</p></div>
-<div class="card rounded-xl p-5"><h3 class="font-bold">🏆 Ranking actual</h3><p class="text-sm text-zinc-300 mt-2">1° Equipo N°3 - 98 pts<br>2° Equipo N°1 - 92 pts<br>3° Equipo N°5 - 89 pts</p></div>
-</div>
-<div class="card rounded-xl p-5 mt-4"><h3 class="font-bold">¿Cómo funciona la materia?</h3><p class="text-sm text-zinc-300 mt-2">1. Estudiás el material. 2. Resolvés casos. 3. Simulás el juicio. 4. Te evaluás y subís en el ranking. Todo queda registrado en tu panel.</p></div>
-</section>
+  <!-- =========================================================================
+       BARRA SUPERIOR GLOBAL: Identidad, Master Clock, Barra de Progreso y Acciones
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-lg">
+    <div class="px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Botón móvil y Logotipo -->
+      <div class="flex items-center gap-3">
+        <button id="btn-toggle-sidebar" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Abrir Menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
 
-<!-- 2 DOCENTE -->
-<section id="sec-docente" class="hidden-section">
-<h2 class="serif text-3xl font-black">Panel Docente</h2><p class="text-zinc-400 text-sm mt-1">Gestión de la cátedra, asistencia y notas.</p>
-<div class="grid md:grid-cols-3 gap-4 mt-5"><div class="card p-5 rounded-xl"><p class="text-3xl font-black">42</p><p class="text-sm">Alumnos activos</p></div><div class="card p-5 rounded-xl"><p class="text-3xl font-black">86%</p><p class="text-sm">Asistencia promedio</p></div><div class="card p-5 rounded-xl"><p class="text-3xl font-black">7.8</p><p class="text-sm">Promedio general</p></div></div>
-<div class="card rounded-xl p-5 mt-4"><h3 class="font-bold">Cargar nota rápida</h3><div class="flex gap-2 mt-3 flex-wrap"><input id="alumnoNota" placeholder="Nombre del alumno" class="rounded-lg px-3 py-2 flex-1"><input id="notaVal" type="number" placeholder="Nota 1-10" class="rounded-lg px-3 py-2 w-32"><button onclick="cargarNota()" class="bg-violet-600 px-4 py-2 rounded-lg font-bold">Guardar</button></div><p id="msgNota" class="text-sm text-emerald-300 mt-2"></p><ul id="listaNotas" class="text-sm mt-3 space-y-1 text-zinc-300"></ul></div>
-</section>
+        <div class="flex items-center gap-3 cursor-pointer" onclick="navigateSection('inicio')">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-700 via-blue-900 to-slate-900 border border-blue-500/40 flex items-center justify-center shadow-md">
+            <!-- Icono Arquitectura + Balanza Legal -->
+            <svg class="w-5 h-5 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h1M9 14h1M9 18h1M14 10h1M14 14h1M14 18h1"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-extrabold tracking-tight text-white text-lg">LEX<span class="text-orange-500">CONSTRUCTA</span></span>
+              <span class="hidden sm:inline-block text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/50">Cátedra Univ.</span>
+            </div>
+            <p class="hidden md:block text-xs text-slate-400">Simulación Interdisciplinaria: Arquitectura, CCCN y Mediación</p>
+          </div>
+        </div>
+      </div>
 
-<!-- 3 ESTUDIANTE -->
-<section id="sec-estudiante" class="hidden-section">
-<h2 class="serif text-3xl font-black">Panel Estudiante</h2>
-<div class="card rounded-xl p-5 mt-5"><p class="font-bold">Tu progreso</p><div class="bg-zinc-800 h-3 rounded-full mt-3 overflow-hidden"><div class="bg-violet-500 h-full" style="width:65%"></div></div><p class="text-sm mt-2">65% completado • 8 de 12 actividades</p></div>
-<div class="grid md:grid-cols-2 gap-4 mt-4"><div class="card p-5 rounded-xl"><h3 class="font-bold">Mis notas</h3><p class="text-sm mt-2">Parcial 1: 8 • Trabajo Práctico: 9 • Simulador: 10</p></div><div class="card p-5 rounded-xl"><h3 class="font-bold">Pendientes</h3><p class="text-sm mt-2">• Leer Caso N°4<br>• Entregar TP N°3<br>• Evaluación del viernes</p></div></div>
-</section>
+      <!-- CRONÓMETRO DESTACADO DE SIMULACIÓN (Master Clock 180 min) -->
+      <div class="flex items-center gap-2 sm:gap-4 bg-slate-950/80 px-3 sm:px-4 py-1.5 rounded-xl border border-slate-700/60 shadow-inner">
+        <div class="flex items-center gap-2">
+          <span class="relative flex h-3 w-3">
+            <span id="timer-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+            <span id="timer-dot" class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+          </span>
+          <div class="hidden sm:block text-right">
+            <div class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Master Clock</div>
+            <div id="label-fase-actual" class="text-xs font-semibold text-blue-400">Fase 1: Apertura &amp; Planteo</div>
+          </div>
+        </div>
 
-<!-- 4 SIMULADOR -->
-<section id="sec-simulador" class="hidden-section">
-<h2 class="serif text-3xl font-black">Simulador de Juicio</h2><p class="text-zinc-400 text-sm mt-1">Elegí tu rol, escribí tu argumento y recibí devolución.</p>
-<div class="card rounded-xl p-5 mt-5"><label class="text-sm font-bold">Elegí tu rol</label><select id="rol" class="w-full rounded-lg px-3 py-2 mt-2"><option>Abogado/a de la parte actora</option><option>Abogado/a de la demandada</option><option>Juez/a</option><option>Fiscal</option></select>
-<label class="text-sm font-bold block mt-4">Tu argumento (mínimo 3 líneas)</label><textarea id="arg" rows="5" class="w-full rounded-lg px-3 py-2 mt-2" placeholder="Ejemplo: La demandada incumplió el contrato al no pagar la certificación N°5..."></textarea>
-<button onclick="evaluarSim()" class="bg-violet-600 px-4 py-2 rounded-lg font-bold mt-3">Enviar argumento</button><div id="resSim" class="mt-4 text-sm"></div></div>
-<div class="card rounded-xl p-5 mt-4"><h3 class="font-bold">Caso de práctica</h3><p class="text-sm text-zinc-300 mt-2"><b>Hechos:</b> Empresa constructora construyó el 70% de una vivienda. El comitente dejó de pagar. La empresa suspendió la obra. El comitente demanda por incumplimiento y pide daños. ¿Quién tiene razón? ¿Qué artículos aplicarías?</p></div>
-</section>
+        <!-- Display Digital del Tiempo -->
+        <div class="flex items-center gap-1">
+          <div id="clock-display" class="font-mono text-xl sm:text-2xl font-black tracking-widest text-orange-400 drop-shadow">00:00</div>
+          <span class="text-[10px] font-mono text-slate-500">/ 180m</span>
+        </div>
 
-<!-- 5 CASOS -->
-<section id="sec-casos" class="hidden-section">
-<h2 class="serif text-3xl font-black">Casos y Jurisprudencia</h2>
-<div class="space-y-3 mt-5">
-<div class="card p-5 rounded-xl"><h3 class="font-bold">Caso N°1 - Vicio oculto</h3><p class="text-sm text-zinc-300">Humedad en cimientos a los 8 meses de entrega. ¿Ruina? ¿Garantía decenal? Art. 1273 CCCN.</p></div>
-<div class="card p-5 rounded-xl"><h3 class="font-bold">Caso N°2 - Mayor costo</h3><p class="text-sm text-zinc-300">Aumento de materiales del 120%. ¿Teoría de la imprevisión? ¿Reajuste? Art. 1091 CCCN.</p></div>
-<div class="card p-5 rounded-xl"><h3 class="font-bold">Caso N°3 - Responsabilidad del director de obra</h3><p class="text-sm text-zinc-300">El director aprobó un material defectuoso. ¿Responsabilidad concurrente con el constructor?</p></div>
-<div class="card p-5 rounded-xl"><h3 class="font-bold">Caso N°4 - Obra paralizada</h3><p class="text-sm text-zinc-300">Falta de pago de 2 certificaciones. ¿Derecho de retención? ¿Suspensión legítima?</p></div>
-</div>
-</section>
+        <!-- Controles Rápidos del Cronómetro -->
+        <div class="flex items-center gap-1 border-l border-slate-800 pl-2">
+          <button id="btn-timer-play" onclick="toggleTimer()" title="Iniciar / Pausar Cronómetro" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition">
+            <svg id="icon-play-state" class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+          </button>
+          <button onclick="speedUpTimer()" title="Acelerar Simulación (1x, 5x, 15x)" class="px-2 py-1 text-[11px] font-mono font-bold rounded bg-slate-800 text-slate-300 hover:text-orange-400 transition">
+            <span id="speed-indicator">1x</span>
+          </button>
+        </div>
+      </div>
 
-<!-- 6 EVAL -->
-<section id="sec-eval" class="hidden-section">
-<h2 class="serif text-3xl font-black">Evaluaciones</h2>
-<div class="card rounded-xl p-5 mt-5"><p class="font-bold">Mini examen - 3 preguntas</p>
-<p class="text-sm mt-4">1. ¿Qué plazo tiene la garantía por ruina total o parcial?</p><select id="p1" class="w-full rounded-lg px-3 py-2 mt-1"><option value="">Elegí...</option><option value="a">1 año</option><option value="b">10 años</option><option value="c">3 años</option></select>
-<p class="text-sm mt-4">2. Si el comitente no paga, el constructor puede:</p><select id="p2" class="w-full rounded-lg px-3 py-2 mt-1"><option value="">Elegí...</option><option value="a">Abandonar sin aviso</option><option value="b">Suspender la obra previa intimación</option><option value="c">Demoler lo construido</option></select>
-<p class="text-sm mt-4">3. El contrato de obra es:</p><select id="p3" class="w-full rounded-lg px-3 py-2 mt-1"><option value="">Elegí...</option><option value="a">Un contrato de hacer una obra a cambio de un precio</option><option value="b">Un contrato de compraventa</option><option value="c">Un contrato de donación</option></select>
-<button onclick="corregir()" class="bg-violet-600 px-4 py-2 rounded-lg font-bold mt-4">Corregir</button><p id="resEval" class="mt-3 font-bold"></p></div>
-</section>
+      <!-- Selector de Modo (Docente / Alumno) & Notificaciones -->
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:flex items-center bg-slate-800 p-1 rounded-lg border border-slate-700 text-xs">
+          <button id="btn-mode-student" onclick="setUserMode('alumno')" class="px-3 py-1 rounded font-medium transition text-slate-300 hover:text-white">
+            Alumno
+          </button>
+          <button id="btn-mode-teacher" onclick="setUserMode('docente')" class="px-3 py-1 rounded font-medium transition bg-orange-600 text-white shadow-sm">
+            Docente
+          </button>
+        </div>
 
-<!-- 7 RANKING -->
-<section id="sec-ranking" class="hidden-section">
-<h2 class="serif text-3xl font-black">Ranking</h2>
-<div class="card rounded-xl p-5 mt-5 space-y-2 text-sm">
-<div class="flex justify-between bg-violet-600 p-3 rounded-lg"><span>🥇 Equipo N°3</span><span>98 pts</span></div>
-<div class="flex justify-between bg-zinc-800 p-3 rounded-lg"><span>🥈 Equipo N°1</span><span>92 pts</span></div>
-<div class="flex justify-between bg-zinc-800 p-3 rounded-lg"><span>🥉 Equipo N°5</span><span>89 pts</span></div>
-<div class="flex justify-between bg-zinc-800 p-3 rounded-lg"><span>4° Equipo N°2</span><span>84 pts</span></div>
-<div class="flex justify-between bg-zinc-800 p-3 rounded-lg"><span>5° Equipo N°4</span><span>79 pts</span></div>
-</div>
-</section>
+        <!-- Botón de Crisis Activa en alerta -->
+        <button onclick="navigateSection('crisis')" title="Cartas de Crisis en curso" class="relative p-2 rounded-lg bg-orange-950/40 border border-orange-500/40 text-orange-400 hover:bg-orange-900/50 transition">
+          <svg class="w-5 h-5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+          </svg>
+          <span id="badge-crisis-count" class="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 text-slate-950 text-[10px] font-black rounded-full flex items-center justify-center">1</span>
+        </button>
+      </div>
 
-<!-- 8 MATERIAL -->
-<section id="sec-material" class="hidden-section">
-<h2 class="serif text-3xl font-black">Material y Biblioteca</h2>
-<div class="grid md:grid-cols-2 gap-4 mt-5">
-<div class="card p-5 rounded-xl"><h3 class="font-bold">📄 Código Civil y Comercial - Contratos de Obra</h3><p class="text-sm text-zinc-300">Arts. 1262 a 1285. Material obligatorio.</p></div>
-<div class="card p-5 rounded-xl"><h3 class="font-bold">📄 Guía de Argumentación Jurídica</h3><p class="text-sm text-zinc-300">Cómo estructurar: hechos, norma, argumento, prueba, petición.</p></div>
-<div class="card p-5 rounded-xl"><h3 class="font-bold">🎥 Clase grabada: Responsabilidad</h3><p class="text-sm text-zinc-300">Duración 45 min. Ver en el aula virtual.</p></div>
-<div class="card p-5 rounded-xl"><h3 class="font-bold">📚 Bibliografía sugerida</h3><p class="text-sm text-zinc-300">Lorenzetti - Contratos. Alterini - Obligaciones. Borda - Tratado.</p></div>
-</div>
-</section>
+    </div>
 
-<!-- 9 CHAT -->
-<section id="sec-chat" class="hidden-section">
-<h2 class="serif text-3xl font-black">Chat de Dudas</h2>
-<div class="card rounded-xl p-5 mt-5"><div id="chatBox" class="space-y-2 text-sm"><div class="bg-zinc-800 p-3 rounded-lg"><b>Prof. Castellano:</b> ¡Hola! Dejen acá sus dudas del TP N°3, respondo todos los días a las 18 hs.</div></div>
-<div class="flex gap-2 mt-4"><input id="chatInput" placeholder="Escribí tu duda..." class="flex-1 rounded-lg px-3 py-2"><button onclick="enviarChat()" class="bg-violet-600 px-4 py-2 rounded-lg font-bold">Enviar</button></div></div>
-</section>
+    <!-- Barra de progreso general de la clase (0% a 100%) -->
+    <div class="w-full bg-slate-800 h-1.5 relative overflow-hidden">
+      <div id="class-progress-bar" class="h-full bg-gradient-to-r from-blue-600 via-orange-500 to-amber-400 transition-all duration-300 w-0" style="width: 0%;"></div>
+    </div>
+  </header>
 
-<!-- 10 ADMIN -->
-<section id="sec-admin" class="hidden-section">
-<h2 class="serif text-3xl font-black">Administración</h2>
-<div class="card rounded-xl p-5 mt-5"><p class="text-sm text-zinc-300">Cátedra: TTE 2026 • Titular: Dra. Gabriela Castellano<br>Comisiones: A y B • Aula: 4 • Horario: Lunes y Miércoles 10 hs<br>Contacto: cátedra vía aula virtual.</p><p class="text-sm mt-3">Esta app funciona 100% en el navegador. No guarda datos en servidores externos. Las notas y mensajes que cargás quedan solo en esta sesión para practicar.</p></div>
-</section>
+  <!-- =========================================================================
+       CUERPO PRINCIPAL: SIDEBAR + VISTA DE CONTENIDOS
+       ========================================================================= -->
+  <div class="flex-1 flex overflow-hidden relative">
 
-</main>
-</div>
-<script>
-function show(id){
-document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden-section'));
-document.getElementById('sec-'+id).classList.remove('hidden-section');
-document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-event.target.classList.add('active');
-window.scrollTo(0,0);
-}
-function cargarNota(){
-let n=document.getElementById('alumnoNota').value; let v=document.getElementById('notaVal').value;
-if(!n||!v){document.getElementById('msgNota').innerText='Completá nombre y nota'; return;}
-document.getElementById('listaNotas').innerHTML+='<li>✓ '+n+' - Nota: '+v+'</li>';
-document.getElementById('msgNota').innerText='Nota guardada ✅'; document.getElementById('alumnoNota').value=''; document.getElementById('notaVal').value='';
-}
-function evaluarSim(){
-let t=document.getElementById('arg').value;
-if(t.length<50){document.getElementById('resSim').innerHTML='<p class=text-red-300>Escribí un poco más, al menos 3 líneas, para poder evaluarte.</p>'; return;}
-document.getElementById('resSim').innerHTML='<div class=bg-emerald-900/40 p-4 rounded-lg><b>Devolución:</b> Buen argumento. Recordá citar: 1) Hechos claros, 2) Norma aplicable (CCCN), 3) Prueba, 4) Petición concreta. Revisá si intimaste antes de suspender. ¡Muy bien! Puntaje estimado: 8/10</div>';
-}
-function corregir(){
-let ok=0; if(document.getElementById('p1').value=='b') ok++; if(document.getElementById('p2').value=='b') ok++; if(document.getElementById('p3').value=='a') ok++;
-document.getElementById('resEval').innerText='Sacaste '+ok+' de 3. '+(ok==3?'¡Perfecto! 🏆':ok==2?'¡Muy bien!':'Revisá el material y volvé a intentar.');
-}
-function enviarChat(){
-let v=document.getElementById('chatInput').value; if(!v) return;
-document.getElementById('chatBox').innerHTML+='<div class=bg-violet-900/50 p-3 rounded-lg><b>Vos:</b> '+v+'</div>';
-document.getElementById('chatInput').value='';
-}
-</script>
-</body>
-</html>
+    <!-- BACKDROP MÓVIL PARA SIDEBAR -->
+    <div id="sidebar-backdrop" onclick="toggleSidebar(false)" class="hidden fixed inset-0 z-20 bg-slate-950/70 backdrop-blur-sm lg:hidden transition-opacity"></div>
+
+    <!-- MENÚ LATERAL DE NAVEGACIÓN -->
+    <aside id="app-sidebar" class="fixed lg:static inset-y-0 left-0 z-30 w-72 bg-slate-900/95 lg:bg-slate-900 border-r border-slate-800 flex flex-col justify-between transition-transform duration-300 -translate-x-full lg:translate-x-0">
+      
+      <!-- Lista de las 10 Secciones Principales -->
+      <div class="flex-1 overflow-y-auto py-4 px-3 space-y-1">
+        
+        <div class="px-3 pb-2 pt-1 text-[11px] font-bold uppercase tracking-wider text-slate-400">
+          Navegación del Taller
+        </div>
+
+        <nav class="space-y-1" id="nav-menu-list">
+          <!-- 1. Inicio / Presentación -->
+          <button onclick="navigateSection('inicio')" data-nav="inicio" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-white bg-blue-900/40 border-l-4 border-orange-500 shadow-sm">
+            <svg class="w-5 h-5 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            <span>1. Inicio &amp; Desafío</span>
+          </button>
+
+          <!-- 2. Panel docente -->
+          <button onclick="navigateSection('panel-docente')" data-nav="panel-docente" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            <div class="flex-1 flex items-center justify-between">
+              <span>2. Panel Docente</span>
+              <span class="text-[9px] bg-blue-950 text-blue-300 px-1.5 py-0.5 rounded border border-blue-700/40">Cátedra</span>
+            </div>
+          </button>
+
+          <!-- 3. Caso y antecedentes -->
+          <button onclick="navigateSection('caso')" data-nav="caso" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            <span>3. Caso &amp; Antecedentes</span>
+          </button>
+
+          <!-- 4. Organización de grupos y roles -->
+          <button onclick="navigateSection('grupos')" data-nav="grupos" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            <span>4. Grupos &amp; Roles</span>
+          </button>
+
+          <!-- 5. Centro de agentes inteligentes -->
+          <button onclick="navigateSection('agentes')" data-nav="agentes" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <div class="flex-1 flex items-center justify-between">
+              <span>5. Agentes de IA</span>
+              <span class="text-[9px] bg-orange-950 text-orange-400 px-1.5 py-0.5 rounded border border-orange-500/40">3 Agentes</span>
+            </div>
+          </button>
+
+          <!-- 6. Documentación profesional -->
+          <button onclick="navigateSection('documentacion')" data-nav="documentacion" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span>6. Documentación</span>
+          </button>
+
+          <!-- 7. Sala de mediación -->
+          <button onclick="navigateSection('mediacion')" data-nav="mediacion" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-5 h-5 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+            <div class="flex-1 flex items-center justify-between">
+              <span>7. Sala de Mediación</span>
+              <span class="text-[9px] bg-red-950 text-red-400 px-1.5 py-0.5 rounded border border-red-500/40">ZOPA</span>
+            </div>
+          </button>
+
+          <!-- 8. Cartas de crisis -->
+          <button onclick="navigateSection('crisis')" data-nav="crisis" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-5 h-5 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            <div class="flex-1 flex items-center justify-between">
+              <span>8. Cartas de Crisis</span>
+              <span class="text-[9px] bg-orange-600/30 text-orange-300 px-1.5 py-0.5 rounded font-bold">Activo</span>
+            </div>
+          </button>
+
+          <!-- 9. Evaluación y puntuación -->
+          <button onclick="navigateSection('evaluacion')" data-nav="evaluacion" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-5 h-5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+            <span>9. Evaluación &amp; Rúbrica</span>
+          </button>
+
+          <!-- 10. Cierre y reflexión -->
+          <button onclick="navigateSection('cierre')" data-nav="cierre" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition text-left text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-5 h-5 text-blue-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            <span>10. Cierre &amp; Reflexión</span>
+          </button>
+        </nav>
+
+        <!-- PANEL DE ESTADO DINÁMICO DE SIMULACIÓN -->
+        <div class="mt-6 pt-4 border-t border-slate-800">
+          <div class="bg-slate-950/60 p-3 rounded-lg border border-slate-800 text-xs space-y-2">
+            <div class="flex items-center justify-between text-slate-400">
+              <span>Taxímetro de Obra:</span>
+              <span id="sidebar-taximetro" class="font-mono text-orange-400 font-bold">$0</span>
+            </div>
+            <div class="flex items-center justify-between text-slate-400">
+              <span>Tensión Negocial:</span>
+              <span id="sidebar-tension" class="font-bold text-amber-400">55% (Media)</span>
+            </div>
+            <div class="flex items-center justify-between text-slate-400">
+              <span>Equipos Activos:</span>
+              <span class="text-white font-medium">4 (20 estudiantes)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer del Sidebar con info de cátedra -->
+      <div class="p-3 border-t border-slate-800 text-[11px] text-slate-400 bg-slate-950/40">
+        <div class="flex items-center justify-between">
+          <span>Práctica Profesional</span>
+          <span class="font-mono text-slate-400">v2.4 - Univ</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- =========================================================================
+         ÁREA PRINCIPAL DE CONTENIDO DINÁMICO (Las 10 Secciones)
+         ========================================================================= -->
+    <main id="main-content" class="flex-1 overflow-y-auto bg-slate-950 p-4 sm:p-6 lg:p-8">
+      
+      <!-- CONTENEDOR DINÁMICO QUE RENDERIZA CADA SECCIÓN -->
+      <div id="section-container" class="max-w-7xl mx-auto space-y-6">
+    <div class="fade-in space-y-8">
+      
+      <!-- HERO BANNER PROFESIONAL UNIVERSITARIO -->
+      <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-950 via-slate-900 to-slate-900 border border-blue-800/40 p-6 sm:p-10 shadow-2xl">
+        <!-- Grilla decorativa sutil -->
+        <div class="absolute -right-10 -bottom-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-10 -top-10 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-4xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-orange-500 animate-ping"></span>
+            Simulador de Práctica Profesional Interdisciplinaria
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Desafío Pericial y Negociación: <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">LexConstructa</span>
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Una excavación de dos subsuelos para una torre de 10 pisos provocó grietas de cizallamiento y asentamiento en una vivienda unifamiliar contigua. Como futuros arquitectos y letrados, deben resolver el conflicto en una <strong class="text-white">audiencia de mediación prejudicial obligatoria (Ley 26.589)</strong>, articulando la técnica constructiva con la responsabilidad civil (CCCN).
+          </p>
+
+          <!-- Métricas de la Simulación -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-800/80">
+            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+              <div class="text-xs text-slate-400">Duración Total</div>
+              <div class="text-lg font-bold text-white font-mono">180 Minutos</div>
+            </div>
+            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+              <div class="text-xs text-slate-400">Equipos &amp; Roles</div>
+              <div class="text-lg font-bold text-orange-400 font-mono">4 Grupos / 20 Est.</div>
+            </div>
+            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+              <div class="text-xs text-slate-400">Marco Normativo</div>
+              <div class="text-lg font-bold text-blue-400 font-mono">CCCN + Ley 26.589</div>
+            </div>
+            <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+              <div class="text-xs text-slate-400">Agentes de Soporte</div>
+              <div class="text-lg font-bold text-emerald-400 font-mono">3 Agentes IA</div>
+            </div>
+          </div>
+
+          <!-- Acciones de Entrada -->
+          <div class="flex flex-wrap items-center gap-3 pt-4">
+            <button onclick="navigateSection('caso')" class="px-5 py-3 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-sm transition shadow-lg flex items-center gap-2">
+              <span>Explorar el Caso y Antecedentes</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+            <button onclick="navigateSection('grupos')" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition border border-slate-700 flex items-center gap-2">
+              <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+              <span>Ver Asignación de Roles</span>
+            </button>
+            <button onclick="startTimer(); navigateSection('panel-docente')" class="px-4 py-3 rounded-xl bg-blue-900/40 hover:bg-blue-800/50 text-blue-300 font-semibold text-sm transition border border-blue-700/50">
+              Lanzar Simulación Docente
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAPA DE RUTA DIDÁCTICA TEMPORAL (6 Fases) -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Cronograma Operativo de la Simulación (180 Minutos)
+          </h2>
+          <span class="text-xs text-slate-400">Progreso Sincronizado</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-smooth space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-orange-400 bg-orange-950/60 px-2 py-0.5 rounded border border-orange-500/30">0 - 30 min</span>
+                <span class="text-xs text-slate-500">Fase 1</span>
+              </div>
+              <h3 class="text-sm font-bold text-white">Apertura &amp; Planteo</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Análisis del caso pericial, lectura de fotos técnicas y detección de responsabilidades preliminares.</p>
+            </div>
+          
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-smooth space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-orange-400 bg-orange-950/60 px-2 py-0.5 rounded border border-orange-500/30">30 - 60 min</span>
+                <span class="text-xs text-slate-500">Fase 2</span>
+              </div>
+              <h3 class="text-sm font-bold text-white">Marco Teórico &amp; Píldoras</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Consultas normativas del CCCN y técnicas de submuración y apuntalamiento.</p>
+            </div>
+          
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-smooth space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-orange-400 bg-orange-950/60 px-2 py-0.5 rounded border border-orange-500/30">60 - 70 min</span>
+                <span class="text-xs text-slate-500">Fase 3</span>
+              </div>
+              <h3 class="text-sm font-bold text-white">Organización de Equipos</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Asunción de roles dentro de los 4 grupos (técnico, letrado y fáctico).</p>
+            </div>
+          
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-smooth space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-orange-400 bg-orange-950/60 px-2 py-0.5 rounded border border-orange-500/30">70 - 110 min</span>
+                <span class="text-xs text-slate-500">Fase 4</span>
+              </div>
+              <h3 class="text-sm font-bold text-white">Laboratorio Documental</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Redacción y validación de Carta Documento intimatoria e Informe Pericial de Daños.</p>
+            </div>
+          
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-smooth space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-orange-400 bg-orange-950/60 px-2 py-0.5 rounded border border-orange-500/30">110 - 150 min</span>
+                <span class="text-xs text-slate-500">Fase 5</span>
+              </div>
+              <h3 class="text-sm font-bold text-white">Sala de Mediación</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Audiencia prejudicial cara a cara, control del taxímetro de obra y tensión negocial.</p>
+            </div>
+          
+            <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-smooth space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-orange-400 bg-orange-950/60 px-2 py-0.5 rounded border border-orange-500/30">150 - 180 min</span>
+                <span class="text-xs text-slate-500">Fase 6</span>
+              </div>
+              <h3 class="text-sm font-bold text-white">Evaluación &amp; Cierre</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Firma de actas (acuerdo o fracaso), rúbrica por desempeño y balance deontológico.</p>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- VISIÓN INTERDISCIPLINARIA: ARQUITECTURA + DERECHO -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-blue-900/50 text-blue-400 flex items-center justify-center font-bold">
+            ARQ
+          </div>
+          <h3 class="text-lg font-bold text-white">Vértice Técnico: Arquitectura y Construcción</h3>
+          <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside">
+            <li>Identificación de fallas de submuración y socavación de taludes.</li>
+            <li>Relevamiento de grietas vivas vs. patologías de humedad preexistentes.</li>
+            <li>Cálculo de presupuestos periciales de apuntalamiento e inyección de resinas.</li>
+            <li>Protocolo de seguridad según Decreto 911/96 y Código de Edificación.</li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <div class="w-10 h-10 rounded-lg bg-orange-900/50 text-orange-400 flex items-center justify-center font-bold">
+            LEG
+          </div>
+          <h3 class="text-lg font-bold text-white">Vértice Jurídico: Responsabilidad Civil y Negociación</h3>
+          <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside">
+            <li>Articulación de responsabilidad objetiva por actividad riesgosa (CCCN Art. 1757).</li>
+            <li>Redacción formal de Carta Documento intimatoria bajo apercibimiento procesal.</li>
+            <li>Estrategia en Sala de Mediación Prejudicial (Ley 26.589) para evitar 4 años de juicio.</li>
+            <li>Administración del costo de obra paralizada y redacción del acta de acuerdo.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    </main>
+
+  </div>
+
+  <!-- Modal para Visualización Detallada o Interacción con Agentes -->
+  <div id="app-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-xl max-w-2xl w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h3 id="modal-title" class="text-lg font-bold text-white">Detalle</h3>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-white">×</button>
+      </div>
+      <div id="modal-body" class="text-sm text-slate-300 space-y-3"></div>
+      <div class="flex justify-end pt-2">
+        <button onclick="closeModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-semibold">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS DE DATOS Y LÓGICA -->
+  <script src="./LexConstructa _ Simulación Profesional en Arquitectura y Derecho_files/data.js"></script>
+  <script src="./LexConstructa _ Simulación Profesional en Arquitectura y Derecho_files/app.js"></script>
+
+
+</body></html>
