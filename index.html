@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEXCONSTRUCTA - Cátedra Universitaria TTE 2026</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+*{font-family:'Inter',sans-serif} .serif{font-family:'Playfair Display',serif}
+body{background:#0f0a1e} .sidebar{background:#1a1033} .card{background:#221844;border:1px solid #3b2a6b}
+.nav-btn.active{background:#7c3aed;color:white} .hidden-section{display:none}
+input,select,textarea{background:#1a1033!important;border:1px solid #3b2a6b!important;color:white!important}
+</style>
+</head>
+<body class="text-white min-h-screen">
+<div class="flex flex-col md:flex-row min-h-screen">
+<!-- SIDEBAR -->
+<aside class="sidebar w-full md:w-72 shrink-0 p-5 md:min-h-screen md:sticky md:top-0">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-violet-600 rounded-xl flex items-center justify-center text-2xl font-black">L</div>
+<div><h1 class="serif text-xl font-black leading-none">LEXCONSTRUCTA</h1><p class="text-[11px] text-violet-300 mt-1">CÁTEDRA UNIVERSITARIA • TTE 2026</p></div>
+</div>
+<p class="text-[11px] tracking-widest text-violet-300 mt-6 mb-2">NAVEGACIÓN</p>
+<nav class="space-y-1 text-sm" id="menu">
+<button onclick="show('inicio')" class="nav-btn active w-full text-left px-3 py-2.5 rounded-lg">1. Inicio & Desafío</button>
+<button onclick="show('docente')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">2. Panel Docente</button>
+<button onclick="show('estudiante')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">3. Panel Estudiante</button>
+<button onclick="show('simulador')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">4. Simulador de Juicio</button>
+<button onclick="show('casos')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">5. Casos y Jurisprudencia</button>
+<button onclick="show('eval')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">6. Evaluaciones</button>
+<button onclick="show('ranking')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">7. Ranking</button>
+<button onclick="show('material')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">8. Material y Biblioteca</button>
+<button onclick="show('chat')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">9. Chat de Dudas</button>
+<button onclick="show('admin')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg">10. Administración</button>
+</nav>
+<div class="card rounded-xl p-4 mt-6"><p class="text-xs text-violet-200">Alumna destacada de la semana</p><p class="font-bold mt-1">Dra. Gabriela Castellano</p><p class="text-xs text-zinc-400">Titular de Cátedra • TTE 2026</p></div>
+</aside>
+
+<!-- MAIN -->
+<main class="flex-1 p-5 md:p-8 max-w-5xl mx-auto w-full">
+
+<!-- 1 INICIO -->
+<section id="sec-inicio">
+<div class="bg-gradient-to-r from-violet-700 to-fuchsia-600 rounded-2xl p-6 md:p-8">
+<h2 class="serif text-3xl md:text-4xl font-black">Bienvenidos a LEXCONSTRUCTA</h2>
+<p class="mt-2 text-violet-100">Derecho • Construcción • Argumentación. Aprender el derecho construyendo casos reales.</p>
+<div class="flex gap-2 mt-5 flex-wrap"><button onclick="show('simulador')" class="bg-white text-violet-800 font-bold px-4 py-2 rounded-lg">Ir al Simulador →</button><button onclick="show('eval')" class="bg-black/30 px-4 py-2 rounded-lg font-bold">Hacer Evaluación</button></div>
+</div>
+<div class="grid md:grid-cols-3 gap-4 mt-5">
+<div class="card rounded-xl p-5"><h3 class="font-bold">🎯 Desafío de la semana</h3><p class="text-sm text-zinc-300 mt-2">Caso: Obra paralizada por falta de pago. ¿Rescisión o suspensión? Armá tu argumento en el Simulador y defendelo.</p><button onclick="show('simulador')" class="mt-3 bg-violet-600 px-3 py-2 rounded-lg text-sm font-bold">Aceptar desafío</button></div>
+<div class="card rounded-xl p-5"><h3 class="font-bold">📚 Próxima clase</h3><p class="text-sm text-zinc-300 mt-2">Responsabilidad del constructor. Contratos de obra. Art. 1262 y ss. Código Civil y Comercial.</p><p class="text-xs text-violet-300 mt-2">Lunes 10 hs • Aula 4</p></div>
+<div class="card rounded-xl p-5"><h3 class="font-bold">🏆 Ranking actual</h3><p class="text-sm text-zinc-300 mt-2">1° Equipo N°3 - 98 pts<br>2° Equipo N°1 - 92 pts<br>3° Equipo N°5 - 89 pts</p></div>
+</div>
+<div class="card rounded-xl p-5 mt-4"><h3 class="font-bold">¿Cómo funciona la materia?</h3><p class="text-sm text-zinc-300 mt-2">1. Estudiás el material. 2. Resolvés casos. 3. Simulás el juicio. 4. Te evaluás y subís en el ranking. Todo queda registrado en tu panel.</p></div>
+</section>
+
+<!-- 2 DOCENTE -->
+<section id="sec-docente" class="hidden-section">
+<h2 class="serif text-3xl font-black">Panel Docente</h2><p class="text-zinc-400 text-sm mt-1">Gestión de la cátedra, asistencia y notas.</p>
+<div class="grid md:grid-cols-3 gap-4 mt-5"><div class="card p-5 rounded-xl"><p class="text-3xl font-black">42</p><p class="text-sm">Alumnos activos</p></div><div class="card p-5 rounded-xl"><p class="text-3xl font-black">86%</p><p class="text-sm">Asistencia promedio</p></div><div class="card p-5 rounded-xl"><p class="text-3xl font-black">7.8</p><p class="text-sm">Promedio general</p></div></div>
+<div class="card rounded-xl p-5 mt-4"><h3 class="font-bold">Cargar nota rápida</h3><div class="flex gap-2 mt-3 flex-wrap"><input id="alumnoNota" placeholder="Nombre del alumno" class="rounded-lg px-3 py-2 flex-1"><input id="notaVal" type="number" placeholder="Nota 1-10" class="rounded-lg px-3 py-2 w-32"><button onclick="cargarNota()" class="bg-violet-600 px-4 py-2 rounded-lg font-bold">Guardar</button></div><p id="msgNota" class="text-sm text-emerald-300 mt-2"></p><ul id="listaNotas" class="text-sm mt-3 space-y-1 text-zinc-300"></ul></div>
+</section>
+
+<!-- 3 ESTUDIANTE -->
+<section id="sec-estudiante" class="hidden-section">
+<h2 class="serif text-3xl font-black">Panel Estudiante</h2>
+<div class="card rounded-xl p-5 mt-5"><p class="font-bold">Tu progreso</p><div class="bg-zinc-800 h-3 rounded-full mt-3 overflow-hidden"><div class="bg-violet-500 h-full" style="width:65%"></div></div><p class="text-sm mt-2">65% completado • 8 de 12 actividades</p></div>
+<div class="grid md:grid-cols-2 gap-4 mt-4"><div class="card p-5 rounded-xl"><h3 class="font-bold">Mis notas</h3><p class="text-sm mt-2">Parcial 1: 8 • Trabajo Práctico: 9 • Simulador: 10</p></div><div class="card p-5 rounded-xl"><h3 class="font-bold">Pendientes</h3><p class="text-sm mt-2">• Leer Caso N°4<br>• Entregar TP N°3<br>• Evaluación del viernes</p></div></div>
+</section>
+
+<!-- 4 SIMULADOR -->
+<section id="sec-simulador" class="hidden-section">
+<h2 class="serif text-3xl font-black">Simulador de Juicio</h2><p class="text-zinc-400 text-sm mt-1">Elegí tu rol, escribí tu argumento y recibí devolución.</p>
+<div class="card rounded-xl p-5 mt-5"><label class="text-sm font-bold">Elegí tu rol</label><select id="rol" class="w-full rounded-lg px-3 py-2 mt-2"><option>Abogado/a de la parte actora</option><option>Abogado/a de la demandada</option><option>Juez/a</option><option>Fiscal</option></select>
+<label class="text-sm font-bold block mt-4">Tu argumento (mínimo 3 líneas)</label><textarea id="arg" rows="5" class="w-full rounded-lg px-3 py-2 mt-2" placeholder="Ejemplo: La demandada incumplió el contrato al no pagar la certificación N°5..."></textarea>
+<button onclick="evaluarSim()" class="bg-violet-600 px-4 py-2 rounded-lg font-bold mt-3">Enviar argumento</button><div id="resSim" class="mt-4 text-sm"></div></div>
+<div class="card rounded-xl p-5 mt-4"><h3 class="font-bold">Caso de práctica</h3><p class="text-sm text-zinc-300 mt-2"><b>Hechos:</b> Empresa constructora construyó el 70% de una vivienda. El comitente dejó de pagar. La empresa suspendió la obra. El comitente demanda por incumplimiento y pide daños. ¿Quién tiene razón? ¿Qué artículos aplicarías?</p></div>
+</section>
+
+<!-- 5 CASOS -->
+<section id="sec-casos" class="hidden-section">
+<h2 class="serif text-3xl font-black">Casos y Jurisprudencia</h2>
+<div class="space-y-3 mt-5">
+<div class="card p-5 rounded-xl"><h3 class="font-bold">Caso N°1 - Vicio oculto</h3><p class="text-sm text-zinc-300">Humedad en cimientos a los 8 meses de entrega. ¿Ruina? ¿Garantía decenal? Art. 1273 CCCN.</p></div>
+<div class="card p-5 rounded-xl"><h3 class="font-bold">Caso N°2 - Mayor costo</h3><p class="text-sm text-zinc-300">Aumento de materiales del 120%. ¿Teoría de la imprevisión? ¿Reajuste? Art. 1091 CCCN.</p></div>
+<div class="card p-5 rounded-xl"><h3 class="font-bold">Caso N°3 - Responsabilidad del director de obra</h3><p class="text-sm text-zinc-300">El director aprobó un material defectuoso. ¿Responsabilidad concurrente con el constructor?</p></div>
+<div class="card p-5 rounded-xl"><h3 class="font-bold">Caso N°4 - Obra paralizada</h3><p class="text-sm text-zinc-300">Falta de pago de 2 certificaciones. ¿Derecho de retención? ¿Suspensión legítima?</p></div>
+</div>
+</section>
+
+<!-- 6 EVAL -->
+<section id="sec-eval" class="hidden-section">
+<h2 class="serif text-3xl font-black">Evaluaciones</h2>
+<div class="card rounded-xl p-5 mt-5"><p class="font-bold">Mini examen - 3 preguntas</p>
+<p class="text-sm mt-4">1. ¿Qué plazo tiene la garantía por ruina total o parcial?</p><select id="p1" class="w-full rounded-lg px-3 py-2 mt-1"><option value="">Elegí...</option><option value="a">1 año</option><option value="b">10 años</option><option value="c">3 años</option></select>
+<p class="text-sm mt-4">2. Si el comitente no paga, el constructor puede:</p><select id="p2" class="w-full rounded-lg px-3 py-2 mt-1"><option value="">Elegí...</option><option value="a">Abandonar sin aviso</option><option value="b">Suspender la obra previa intimación</option><option value="c">Demoler lo construido</option></select>
+<p class="text-sm mt-4">3. El contrato de obra es:</p><select id="p3" class="w-full rounded-lg px-3 py-2 mt-1"><option value="">Elegí...</option><option value="a">Un contrato de hacer una obra a cambio de un precio</option><option value="b">Un contrato de compraventa</option><option value="c">Un contrato de donación</option></select>
+<button onclick="corregir()" class="bg-violet-600 px-4 py-2 rounded-lg font-bold mt-4">Corregir</button><p id="resEval" class="mt-3 font-bold"></p></div>
+</section>
+
+<!-- 7 RANKING -->
+<section id="sec-ranking" class="hidden-section">
+<h2 class="serif text-3xl font-black">Ranking</h2>
+<div class="card rounded-xl p-5 mt-5 space-y-2 text-sm">
+<div class="flex justify-between bg-violet-600 p-3 rounded-lg"><span>🥇 Equipo N°3</span><span>98 pts</span></div>
+<div class="flex justify-between bg-zinc-800 p-3 rounded-lg"><span>🥈 Equipo N°1</span><span>92 pts</span></div>
+<div class="flex justify-between bg-zinc-800 p-3 rounded-lg"><span>🥉 Equipo N°5</span><span>89 pts</span></div>
+<div class="flex justify-between bg-zinc-800 p-3 rounded-lg"><span>4° Equipo N°2</span><span>84 pts</span></div>
+<div class="flex justify-between bg-zinc-800 p-3 rounded-lg"><span>5° Equipo N°4</span><span>79 pts</span></div>
+</div>
+</section>
+
+<!-- 8 MATERIAL -->
+<section id="sec-material" class="hidden-section">
+<h2 class="serif text-3xl font-black">Material y Biblioteca</h2>
+<div class="grid md:grid-cols-2 gap-4 mt-5">
+<div class="card p-5 rounded-xl"><h3 class="font-bold">📄 Código Civil y Comercial - Contratos de Obra</h3><p class="text-sm text-zinc-300">Arts. 1262 a 1285. Material obligatorio.</p></div>
+<div class="card p-5 rounded-xl"><h3 class="font-bold">📄 Guía de Argumentación Jurídica</h3><p class="text-sm text-zinc-300">Cómo estructurar: hechos, norma, argumento, prueba, petición.</p></div>
+<div class="card p-5 rounded-xl"><h3 class="font-bold">🎥 Clase grabada: Responsabilidad</h3><p class="text-sm text-zinc-300">Duración 45 min. Ver en el aula virtual.</p></div>
+<div class="card p-5 rounded-xl"><h3 class="font-bold">📚 Bibliografía sugerida</h3><p class="text-sm text-zinc-300">Lorenzetti - Contratos. Alterini - Obligaciones. Borda - Tratado.</p></div>
+</div>
+</section>
+
+<!-- 9 CHAT -->
+<section id="sec-chat" class="hidden-section">
+<h2 class="serif text-3xl font-black">Chat de Dudas</h2>
+<div class="card rounded-xl p-5 mt-5"><div id="chatBox" class="space-y-2 text-sm"><div class="bg-zinc-800 p-3 rounded-lg"><b>Prof. Castellano:</b> ¡Hola! Dejen acá sus dudas del TP N°3, respondo todos los días a las 18 hs.</div></div>
+<div class="flex gap-2 mt-4"><input id="chatInput" placeholder="Escribí tu duda..." class="flex-1 rounded-lg px-3 py-2"><button onclick="enviarChat()" class="bg-violet-600 px-4 py-2 rounded-lg font-bold">Enviar</button></div></div>
+</section>
+
+<!-- 10 ADMIN -->
+<section id="sec-admin" class="hidden-section">
+<h2 class="serif text-3xl font-black">Administración</h2>
+<div class="card rounded-xl p-5 mt-5"><p class="text-sm text-zinc-300">Cátedra: TTE 2026 • Titular: Dra. Gabriela Castellano<br>Comisiones: A y B • Aula: 4 • Horario: Lunes y Miércoles 10 hs<br>Contacto: cátedra vía aula virtual.</p><p class="text-sm mt-3">Esta app funciona 100% en el navegador. No guarda datos en servidores externos. Las notas y mensajes que cargás quedan solo en esta sesión para practicar.</p></div>
+</section>
+
+</main>
+</div>
+<script>
+function show(id){
+document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden-section'));
+document.getElementById('sec-'+id).classList.remove('hidden-section');
+document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
+window.scrollTo(0,0);
+}
+function cargarNota(){
+let n=document.getElementById('alumnoNota').value; let v=document.getElementById('notaVal').value;
+if(!n||!v){document.getElementById('msgNota').innerText='Completá nombre y nota'; return;}
+document.getElementById('listaNotas').innerHTML+='<li>✓ '+n+' - Nota: '+v+'</li>';
+document.getElementById('msgNota').innerText='Nota guardada ✅'; document.getElementById('alumnoNota').value=''; document.getElementById('notaVal').value='';
+}
+function evaluarSim(){
+let t=document.getElementById('arg').value;
+if(t.length<50){document.getElementById('resSim').innerHTML='<p class=text-red-300>Escribí un poco más, al menos 3 líneas, para poder evaluarte.</p>'; return;}
+document.getElementById('resSim').innerHTML='<div class=bg-emerald-900/40 p-4 rounded-lg><b>Devolución:</b> Buen argumento. Recordá citar: 1) Hechos claros, 2) Norma aplicable (CCCN), 3) Prueba, 4) Petición concreta. Revisá si intimaste antes de suspender. ¡Muy bien! Puntaje estimado: 8/10</div>';
+}
+function corregir(){
+let ok=0; if(document.getElementById('p1').value=='b') ok++; if(document.getElementById('p2').value=='b') ok++; if(document.getElementById('p3').value=='a') ok++;
+document.getElementById('resEval').innerText='Sacaste '+ok+' de 3. '+(ok==3?'¡Perfecto! 🏆':ok==2?'¡Muy bien!':'Revisá el material y volvé a intentar.');
+}
+function enviarChat(){
+let v=document.getElementById('chatInput').value; if(!v) return;
+document.getElementById('chatBox').innerHTML+='<div class=bg-violet-900/50 p-3 rounded-lg><b>Vos:</b> '+v+'</div>';
+document.getElementById('chatInput').value='';
+}
+</script>
+</body>
+</html>
