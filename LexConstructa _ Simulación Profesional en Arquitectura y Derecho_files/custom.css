@@ -1,0 +1,137 @@
+/* ==========================================================================
+   LexConstructa - Sistema de Simulación Profesional en Arquitectura y Derecho
+   Paleta: Gama de Grises Técnicos, Azules Universitarios y Acento Naranja Constructivo
+   ========================================================================== */
+
+:root {
+  /* Grises Técnicos y Estructurales */
+  --color-slate-950: #090d16;
+  --color-slate-900: #0f172a;
+  --color-slate-850: #131d31;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+  --color-slate-50:  #f8fafc;
+  
+  /* Azules Universitarios y Jurídicos */
+  --color-blue-900: #1e3a8a;
+  --color-blue-800: #1e40af;
+  --color-blue-700: #1d4ed8;
+  --color-blue-600: #2563eb;
+  --color-blue-500: #3b82f6;
+  --color-blue-400: #60a5fa;
+  --color-blue-100: #dbeafe;
+  --color-blue-50:  #eff6ff;
+
+  /* Naranja de Obra / Seguridad / Dinamización */
+  --color-orange-600: #ea580c;
+  --color-orange-500: #f97316;
+  --color-orange-400: #fb923c;
+  --color-orange-100: #ffedd5;
+  --color-orange-50:  #fff7ed;
+
+  /* Semáforos / Estados */
+  --color-emerald-500: #10b981;
+  --color-rose-500: #f43f5e;
+  --color-amber-500: #f59e0b;
+
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'Merriweather', Georgia, serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-100);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Transiciones y animaciones suaves */
+.transition-smooth {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar refinado */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-slate-900);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-700);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate-500);
+}
+
+/* Bordes y sombras profesionales */
+.border-blueprint {
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+.glow-orange {
+  box-shadow: 0 0 20px -3px rgba(249, 115, 22, 0.25);
+}
+.glow-blue {
+  box-shadow: 0 0 20px -3px rgba(37, 99, 235, 0.25);
+}
+
+/* Tarjetas de agentes */
+.agent-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.agent-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Pulso sutil para el cronómetro */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+.timer-pulse {
+  animation: pulseSubtle 2s infinite ease-in-out;
+}
+
+/* Ticker de obra */
+.ticker-value {
+  font-family: var(--font-mono);
+  letter-spacing: -0.05em;
+}
+
+/* Estilo formal de documentos legales y periciales */
+.legal-document-paper {
+  background-color: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-serif);
+}
+.legal-document-paper h1, 
+.legal-document-paper h2, 
+.legal-document-paper h3 {
+  font-family: var(--font-main);
+}
